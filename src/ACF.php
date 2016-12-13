@@ -45,8 +45,8 @@
     {
       $col = [];
       switch ($return) :
-        case 'object': $func = 'get_field_obj_safe'; break;
-        case 'value': $func = 'get_field_safe'; break;    
+        case 'object': $func = 'getFieldObj'; break;
+        case 'value': $func = 'getField'; break;    
         default: return 'false'; break;
       endswitch;
       foreach ($array as $field => $args) :
