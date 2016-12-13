@@ -1,0 +1,16 @@
+{
+    "name": "murmurcreative/use-fields",
+    "description": "A friendly interface for safely interacting with ACF.",
+    "authors": [
+        {
+            "name": "Ben Bateman",
+            "email": "ben@murmurcreative.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Murmur\\WP\\": "src/"
+        }
+    }
+}
