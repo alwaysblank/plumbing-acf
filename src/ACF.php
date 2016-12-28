@@ -6,16 +6,14 @@
      * Get an ACF Field, but safely.
      * 
      * @param string $field 
-     * @param int|null $id // Pass an id if you want fields from a different object (or options)
+     * @param int|bool $id // Pass an id if you want fields from a different object (or options)
+     * @param bool $format // Pass bool false to recieve unformatted field data
      * @return mixed
      */
-    static function getField($field, $id = null)
+    static function getField($field, $id = false, $format = true)
     {
       if(!function_exists('get_field')) : return false; 
-      else :
-        if($id !== null) : return get_field($field, $id);
-        elseif($id === null) : return get_field($field); endif;
-      endif;
+      else : return get_field($field, $id, $format); endif;
     }
 
     /**
@@ -50,8 +48,7 @@
         default: return 'false'; break;
       endswitch;
       foreach ($array as $field => $args) :
-        if(array_key_exists('id', $args)) : $tmp = self::$func($field, $args['id']);
-        else: $tmp = self::$func($field); endif;
+        $tmp = self::$func($field, ($args['id'] ?? false), ($args['format'] ?? true));
         if(!$tmp) : continue; endif;
         if(array_key_exists('callback', $args)) :
           $callback = $args['callback'];
