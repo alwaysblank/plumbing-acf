@@ -56,7 +56,7 @@
         if(array_key_exists('callback', $args)) :
           $callback = $args['callback'];
           if(array_key_exists('callback_args', $args)) : $call_args = $args['callback_args'];
-          else : $call_args = null; endif;
+          else : $call_args = []; endif;
           $tmp = call_user_func_array($callback, array_merge([$tmp], $call_args));
         endif;
         $col[($args['name'] ?? $field)] = $tmp;

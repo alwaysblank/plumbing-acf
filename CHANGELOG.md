@@ -1,3 +1,10 @@
+## v1.1
+
+Fix for callbacks.
+  
+  * Fixed: Using a callback without additional args (beyond the returned fields) caused an error.
+
+
 ## v1.0
 
 Inital release!
