@@ -7,7 +7,7 @@
             "email": "ben@murmurcreative.com"
         }
     ],
-    "require": {
+    "require-dev": {
         "squizlabs/php_codesniffer": "^3.1"
     },
     "autoload": {
