@@ -1,6 +1,6 @@
-<?php namespace Murmur\WP;
+<?php namespace Livy\Plumbing\ACF;
   
-class ACF
+class Simple
 {
     /**
      * Get an ACF Field, but safely.
@@ -128,6 +128,11 @@ class ACF
              */
             unset($tmp);
         endforeach;
-        return $col;
+
+        if (function_exists('collect') &&  class_exists('\\Illuminate\\Support\\Collection')) {
+            return collect($col);
+        } else {
+            return $col;
+        }
     }
 }

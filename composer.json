@@ -1,10 +1,10 @@
 {
-    "name": "murmurcreative/use-fields",
+    "name": "livy/plumbing-acf",
     "description": "A friendly interface for safely interacting with ACF.",
     "authors": [
         {
             "name": "Ben Bateman",
-            "email": "ben@murmurcreative.com"
+            "email": "ben@alwaysblank.org"
         }
     ],
     "require-dev": {
@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Murmur\\WP\\": "src/"
+            "Livy\\Plumbing\\ACF": "src/"
         }
     },
     "scripts": {
