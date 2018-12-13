@@ -1,6 +1,4 @@
-<?php namespace Livy\Plumbing\ACF\Functions;
-
-use Livy\Plumbing\ACF\Simple;
+<?php namespace Livy\Plumbing\ACF;
 
 /**
  * Get a field.
