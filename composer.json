@@ -1,6 +1,7 @@
 {
     "name": "livy/plumbing-acf",
     "description": "A friendly interface for safely interacting with ACF.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ben Bateman",
